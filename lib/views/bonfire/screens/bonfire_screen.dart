@@ -143,16 +143,25 @@ class _BonfireScreenState extends State<BonfireScreen> {
                       children: [
                         Row(
                           children: [
-                            CircleAvatar(
-                              radius: 50, // Adjust size of the avatar
-                              backgroundImage: AssetImage('assets/images/person.png'), // Replace with your image asset
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Color.fromRGBO(18, 21, 24, 0.9), width: 5),
+                              ),
+                              child: CircleAvatar(
+                                radius: 50, // Adjust size of the avatar
+                                backgroundImage: AssetImage('assets/images/person.png'), // Replace with your image asset
+                              ),
                             ),
                         
                             Container(
                               padding: EdgeInsets.all(8),
                               decoration: BoxDecoration(
                                 color: Color.fromRGBO(18, 21, 24, 0.9),
-                                borderRadius: BorderRadius.circular(10)
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(12),
+                                  bottomRight: Radius.circular(12),
+                                )
                               ),
                               child: Text(
                                 "Angelina, 28",
