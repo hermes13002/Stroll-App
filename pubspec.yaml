@@ -37,6 +37,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   persistent_bottom_nav_bar: ^6.2.1
   flutter_svg: ^2.0.16
+  google_fonts: ^6.2.1
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +68,11 @@ flutter:
     - assets/icons/bonfire.svg
     - assets/icons/chat.svg
     - assets/icons/user.svg
+    - assets/icons/fade.svg
+    - assets/icons/dropdown.svg
+    - assets/icons/mic.svg
+    - assets/images/bg.png
+    - assets/images/person.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

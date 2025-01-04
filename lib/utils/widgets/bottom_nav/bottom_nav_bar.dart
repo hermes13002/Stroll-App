@@ -1,5 +1,6 @@
 import 'package:stroll_app/app/imports.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:stroll_app/views/home/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -14,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> _buildScreens() {
     return [
       HomeScreen(),
-      HomeScreen(),
+      BonfireScreen(),
       HomeScreen(),
       HomeScreen(),
     ];
@@ -30,54 +31,43 @@ class _BottomNavBarState extends State<BottomNavBar> {
           initialRoute: "/",
           routes: {
             "/home": (final context) => HomeScreen(),
-            // "/favourite": (final context) => const FavouriteScreen(),
-            // "/cart": (final context) => const CartScreen(),
-            // "/settings": (final context) => const SettingsScreen(),
+            "/bonfire": (final context) => const BonfireScreen(),
           },
         ),
       ),
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset("assets/icons/bonfire.svg"),
-        // title: ("Favourite"),
         activeColorPrimary: AppColors.primaryColor,
         inactiveColorPrimary: Colors.grey[300],
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: "/",
           routes: {
             "/home": (final context) => HomeScreen(),
-            // "/favourite": (final context) => const FavouriteScreen(),
-            // "/cart": (final context) => const CartScreen(),
-            // "/settings": (final context) => const SettingsScreen(),
+            "/bonfire": (final context) => const BonfireScreen(),
           },
         ),
       ),
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset("assets/icons/chat.svg"),
-        // title: ("Cart"),
         activeColorPrimary: AppColors.primaryColor,
         inactiveColorPrimary: Colors.grey[300],
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: "/",
           routes: {
             "/home": (final context) => HomeScreen(),
-            // "/favourite": (final context) => const FavouriteScreen(),
-            // "/cart": (final context) => const CartScreen(),
-            // "/settings": (final context) => const SettingsScreen(),
+            "/bonfire": (final context) => const BonfireScreen(),
           },
         ),
       ),
       PersistentBottomNavBarItem(
         icon: SvgPicture.asset("assets/icons/user.svg"),
-        // title: ("Settings"),
         activeColorPrimary: AppColors.primaryColor,
         inactiveColorPrimary: Colors.grey[300],
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: "/",
           routes: {
             "/home": (final context) => HomeScreen(),
-            // "/favourite": (final context) => const FavouriteScreen(),
-            // "/cart": (final context) => const CartScreen(),
-            // "/settings": (final context) => const SettingsScreen(),
+            "/bonfire": (final context) => const BonfireScreen(),
           },
         ),
       ),
@@ -115,7 +105,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       ),
       confineToSafeArea: true,
       navBarHeight: kBottomNavigationBarHeight,
-      navBarStyle: NavBarStyle.style6, // Choose the nav bar style with this property
+      navBarStyle: NavBarStyle.style5, // Choose the nav bar style with this property
     );
   }
 }

@@ -1,7 +1,10 @@
 export 'package:flutter/material.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
-export 'package:stroll_app/views/home/screens/home_screen.dart';
+export 'package:stroll_app/views/bonfire/screens/bonfire_screen.dart';
 export 'package:stroll_app/constant/colors.dart';
 export 'package:stroll_app/utils/widgets/bottom_nav/bottom_nav_bar.dart';
 export 'package:stroll_app/utils/widgets/bottom_nav/nav.dart';
+export 'package:stroll_app/utils/widgets/custom_layout_builder.dart';
+export 'package:gap/gap.dart';
+export 'package:google_fonts/google_fonts.dart';

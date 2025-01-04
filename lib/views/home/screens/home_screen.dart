@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:stroll_app/app/imports.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +10,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
+      body: CustomLayoutBuilder(
+        child: Center(
+          child: Text(
+            'Home Screen'
+          ),
+        )
+      )
+    );
   }
 }
