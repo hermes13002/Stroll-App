@@ -314,7 +314,7 @@ class _BonfireScreenState extends State<BonfireScreen> {
                                     shape: BoxShape.circle,
                                   ),
                                   child: Center(
-                                    child: Icon(Icons.keyboard_arrow_right_rounded, color: Colors.black, size: 26.sp,)
+                                    child: Icon(Icons.chevron_right_rounded, color: Colors.black, size: 32.sp,)
                                   ),
                                 ),
                               ],

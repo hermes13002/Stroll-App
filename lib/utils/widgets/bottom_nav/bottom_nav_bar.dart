@@ -36,7 +36,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset("assets/icons/bonfire.svg"),
+        icon: Stack(children: [
+          SvgPicture.asset("assets/icons/bonfire.svg"),
+          Positioned(
+              right: -2,
+              top: 0,
+              child: dotContainer(''),
+            ),
+        ]),
         activeColorPrimary: AppColors.primaryColor,
         inactiveColorPrimary: Colors.grey[300],
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
@@ -48,7 +55,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset("assets/icons/chat.svg"),
+         icon: Stack(
+          children: [
+            SvgPicture.asset("assets/icons/chat.svg"),
+            Positioned(
+              right: 0,
+              top: 0,
+              child: dotContainer('10'),
+            ),
+          ],
+        ),
         activeColorPrimary: AppColors.primaryColor,
         inactiveColorPrimary: Colors.grey[300],
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
@@ -105,7 +121,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
       ),
       confineToSafeArea: true,
       navBarHeight: kBottomNavigationBarHeight,
-      navBarStyle: NavBarStyle.style5, // Choose the nav bar style with this property
+      navBarStyle: NavBarStyle.style6, 
+    );
+  }
+
+  Widget dotContainer(String text) {
+    return Container(
+      width: 13.w,
+      height: 7.h,
+      decoration: BoxDecoration(
+        color: AppColors.primaryColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: GoogleFonts.montserrat(
+            color: Colors.black, fontSize: 5.5.sp, fontWeight: FontWeight.w700
+          ),
+        ),
+      ),
     );
   }
 }
